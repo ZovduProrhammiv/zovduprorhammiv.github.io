@@ -1,0 +1,60 @@
+.advantages {
+    background-color: #F6F6F6;
+    min-width: 473px;
+    padding: 70px 0 64px 0;
+    &__header {
+        margin: 0 0 60px 0;
+        font-size: 30px;
+        font-weight: 700;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    &__advantages_elements {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__advantages_elem {
+        width: 277px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .header {
+            margin: 35px 0 20px 0;
+            font-size: 18px;
+            font-weight: 700;
+        }
+        img {
+            width: 91px;
+            height: 84px;
+            &.animated_1 {
+                animation-name: heartbeat;
+                animation-duration: 1s;
+                animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                animation-iteration-count: infinite;
+            }
+        }
+        .descr {
+            text-align: center;
+            font-size: 14px;
+            font-weight: 300;
+            span {
+                color: #FF0000;
+            }
+        }
+    }
+}
+@media (min-width: 220px) and (max-width: 760px) {
+    .advantages {
+        &__advantages_elements {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        &__advantages_elem {
+            display: flex;
+            margin: 45px 0 0 50%;
+            transform: translateX(-50%);
+            justify-content: space-between;
+        }
+    }
+}
